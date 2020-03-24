@@ -1,0 +1,16 @@
+.row.proximos-viajes.mt-5
+		each trip in trips
+			.col-md-6.col-lg-4.mb-4
+				.card
+					img(src=`/img/destinos_${trip.imagen}.jpg`,class="img-fluid")
+					.card-body
+						h2=trip.titulo
+						br
+						p
+							i.fi-xnluxl-calendar
+							| #{trip.fecha_ida} - #{trip.fecha_vuelta}
+						p
+							i.fi-ctsuxl-euro-symbol 
+							| #{trip.precio}
+						p= (trip.descripcion).substr(0,100)
+						a(href=`viajes/${trip.id}`,class="btn btn-success btn-block") Más información

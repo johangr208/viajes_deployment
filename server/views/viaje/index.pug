@@ -1,0 +1,19 @@
+extends ../layout/index
+
+block contenido
+	main.container.mt-5
+		.row
+			.col-md-5
+				img(src=`/img/destinos_${trip.imagen}_ln.jpg`,class="img-fluid")
+			.col-md-7
+				h1 #{trip.titulo}
+				p
+					i.fi-xnluxl-calendar
+					| Fecha Ida #{trip.fecha_ida} - Fecha Vuelta #{trip.fecha_vuelta}
+				p
+					i.fi-ctsuxl-euro-symbol 
+					|   #{trip.precio} COP
+				p
+					i.fi-xnsuxl-team-solid 
+					|   #{trip.disponible} Disponibles
+				p= 	trip.descripcion
